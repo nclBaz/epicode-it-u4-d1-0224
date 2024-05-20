@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
   public static void main(String[] args) {
     System.out.println("Ciao a tutti");
@@ -65,5 +67,47 @@ public class Main {
       System.out.println("Elemento corrente è: " + stringArray[i]);
       System.out.println("L'indice corrente è: " + i);
     }
+
+    // ------------------------------------- METODI ----------------------------------
+    int result = sum(20, 20);
+    System.out.println("Il risultato è: " + result);
+
+    printSum(40, 40);
+
+    // ------------------------------------- SCANNER ----------------------------------
+    // Creo lo scanner
+    Scanner sc = new Scanner(System.in);
+    // Creazione dello scanner, strumento necessario per poter richiedere
+    // all'utente degli input
+    // System.in significa, per favore scanner leggi quello che l'utente scrive in console
+
+    // Utilizzo lo scanner
+    System.out.println("Utente inserisci il tuo nome");
+    String firstName = sc.nextLine();
+    System.out.println("Hai inserito: " + firstName);
+
+    System.out.println("Utente inserisci un numero intero");
+    int num1 = Integer.parseInt(sc.nextLine());
+    // Nonostante esista nextInt, consiglio di usare dappertutto nextLine, al limite convertendo con
+    // parseInt a intero
+    System.out.println("Utente inserisci un secondo numero intero");
+    int num2 = Integer.parseInt(sc.nextLine());
+    System.out.println("La somma dei numeri che hai inserito é: " + sum(num1, num2));
+
+    // Chiudo lo scanner
+    sc.close();
+    // E' buona norma chiudere lo scanner alla fine del suo utilizzo
+  } // Il main è un METODO della classe Main
+
+  public static int sum(int num1, int num2) {
+    // Qua sto dichiarando che il metodo dovrà tornare un INT
+
+    return num1 + num2; // Quindi devo tornare un INT
+  }
+
+  public static void printSum(int num1, int num2) {
+    // Qua sto dichiarando che il metodo non deve tornare niente
+    System.out.println("La somma è: " + sum(num1, num2));
+    // return num1 + num2; questo è sbagliato
   }
 }
