@@ -44,5 +44,26 @@ public class Main {
     System.out.println("La lunghezza della stringa è: " + piuCaratteri.length());
     System.out.println(piuCaratteri.toUpperCase());
     System.out.println("La stringa inizia con:" + piuCaratteri.charAt(0));
+
+    // ------------------------------ ARRAYS -----------------------------
+
+    String[] stringArray = {"La", "lunghezza", "della", "stringa", "è"}; // Array di 5 stringhe
+    // già inizializzato
+    // String[] stringArray = new String[5];
+    // Array di 5 stringhe non inizializzato ("vuoto", cioè tutti gli elementi sono
+    // null)
+    int[] numbersArray = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    System.out.println("Il primo elemento è: " + numbersArray[0]);
+    System.out.println("Il secondo elemento è: " + numbersArray[1]);
+    System.out.println("Il terzo elemento è: " + numbersArray[2]);
+    System.out.println("L'ultimo elemento è: " + numbersArray[9]);
+    System.out.println("L'ultimo elemento è: " + numbersArray[numbersArray.length - 1]);
+    // Se cerco di accedere ad un elemento al di fuori della dimensione dell'array otterrò una
+    // brutta eccezione
+
+    for (int i = 0; i < stringArray.length; i++) {
+      System.out.println("Elemento corrente è: " + stringArray[i]);
+      System.out.println("L'indice corrente è: " + i);
+    }
   }
 }
